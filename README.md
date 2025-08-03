@@ -4,6 +4,48 @@
 
 This folder contains the implementation for the Teams RAG Chat Bot, an exercise project designed to provide hands-on experience with retrieval-augmented generation (RAG) and Microsoft Teams integration. The project aligns with the Charlie onboarding ramp-up plan and focuses on practical application of key Azure and AI technologies.
 
+## 1.1 Quick Start
+
+To get this project running after cloning:
+
+### Prerequisites
+- Node.js (18, 20, or 22)
+- Python 3.8+
+- Microsoft 365 Agents Toolkit VS Code Extension
+- Azure subscription
+
+### Setup Steps
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd Teams-RAG-Chat-Bot
+   ```
+
+2. **Set up Data Ingestion**
+   ```bash
+   cd "Data Ingestion"
+   pip install -r requirements.txt
+   # Copy .env.example to .env and fill in your Azure credentials
+   ```
+
+3. **Set up RAG API**
+   ```bash
+   cd "../RAG API"
+   pip install -r requirements.txt
+   # Copy .env.example to .env and fill in your Azure credentials
+   python app.py
+   ```
+
+4. **Set up Teams Bot**
+   ```bash
+   cd "../Teams Bot"
+   npm install
+   # Configure environment files in env/ folder
+   npm run dev
+   ```
+
+See individual folder READMEs for detailed setup instructions.
+
 ## 2.0 Exercise Overview
 
 The objective is to develop a functional Q&A chatbot integrated with Microsoft Teams, utilizing RAG to answer questions based on a custom dataset. The primary technologies and frameworks used include:
