@@ -1,0 +1,92 @@
+[
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "Smart Support Ticket Prioritization System\n\nYour Name\n\nID: Your ID Number\n\nJuly 15, 2025\n\n1\n\nIntroduction\n\nCustomer support is vital across industries. As businesses grow, the volume of customer queries—via email, web forms, or chat—increases, making it difficult for support teams to identify and respond to urgent issues quickly. Traditional systems process tickets by arrival order, which can delay responses to critical problems and harm customer satisfaction and retention [4, 5].\n\nThis project proposes a Smart Support Ticket Prioritization System that uses Natural Language Processing (NLP) and Machine Learning (ML) to analyze incoming sup- port tickets, score their urgency based on message content and customer value, and present prioritized tickets in a dashboard. This helps agents address the most important issues first, improving efficiency and customer experience [8].",
+    "chunk_id": "chunk_0",
+    "page_number": 1
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "Potential Benefits:\n\n• Academic: Supports research in NLP/ML for customer service.\n\n• Technical: Delivers a prototype combining NLP, ML, and web technologies for real- time ticket triage.\n\n• Business: Improves satisfaction and reduces churn by prioritizing urgent issues.\n\n• Social: Enhances experience for users with urgent needs and supports fairer service delivery.\n\n2 Problem Statement\n\nCompanies receive many support requests daily. Manual triage is slow and error-prone, risking missed or delayed urgent cases. Delayed responses can cause lost productivity, dis- satisfaction, and reputational harm. Existing systems often rely on simple rules or manual sorting, lacking analysis of message context or customer value [5].\n\nWhy this research is needed: There is a need for systems that use NLP and customer data to prioritize tickets in real time. Addressing this can improve operational efficiency and customer outcomes as expectations for rapid, personalized support rise [4].\n\n1",
+    "chunk_id": "chunk_1",
+    "page_number": 1
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "3 Research Questions\n\nMain Question: How can NLP and ML be used to prioritize customer support tickets by urgency in a scalable, industry-independent way?\n\nSupporting Questions:\n\n• Which ticket text and customer properties best predict urgency?\n\n• How well do different ML models predict ticket urgency?\n\n• What are the challenges in integrating such a system into existing support workflows?\n\n• How can the system be adapted to different industries and ticket types?\n\nThese questions are feasible, interesting, novel, ethical, and relevant.",
+    "chunk_id": "chunk_2",
+    "page_number": 2
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "4 Literature Review\n\nAutomated ticket classification is a growing research and industry area. NLP can detect intent and urgency in text, improving triage accuracy [4]. Early methods used keyword searches but lacked context sensitivity [5]. Recent work uses ML to classify tickets based on features from ticket text and customer data [8].\n\nIntegrating customer value (e.g., spending history) is important, as not all tickets have equal business impact [8]. Public datasets, such as those on Kaggle, provide real-world data for training and evaluating ML models [9]. Despite progress, few solutions combine NLP, customer metrics, and real-time dashboards for support teams.",
+    "chunk_id": "chunk_3",
+    "page_number": 2
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "Advances in NLP, such as transformer models and multilingual embeddings, allow anal- ysis across languages, critical for global companies. Simpler models like logistic regression and decision trees remain common due to interpretability and efficiency. The choice of model depends on the trade-off between accuracy, speed, and deployment ease.\n\nUrgency scoring is supported by research showing customers expect faster responses to critical issues, and prioritizing high-value or high-impact tickets reduces churn. Risks of bias exist if the system over-prioritizes certain customers or ticket types, which must be managed through careful design and evaluation [11].",
+    "chunk_id": "chunk_4",
+    "page_number": 2
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "5 Methods\n\n5.1 System Overview\n\n• Frontend: Web dashboard (React) for agents, displaying prioritized tickets, urgency scores, filters, and action buttons.\n\n• Backend: RESTful API (Flask) with an SQL Database to store tickets, customer profiles, and urgency scores.\n\n• ML Model: Classifier trained on real-world datasets, using ticket text and customer metrics to predict urgency (score 0–1).\n\n2\n\n5.2 Data Sources\n\nTwo public datasets will be evaluated:\n\n1. Multilingual Customer Support Tickets: Ticket text, metadata, and CRM data— suitable for NLP analysis.\n\n2. Customer Support Ticket Dataset: Ticket descriptions, categories, urgency labels, and agent replies—ideal for supervised ML.\n\nDatasets will be assessed for quality and completeness. Data augmentation (e.g., syn- thetic ticket generation or translation) may be used if needed [9].",
+    "chunk_id": "chunk_5",
+    "page_number": 2
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "5.3 Data Processing\n\n• Preprocessing: Clean text, remove noise, handle missing values, normalize data.\n\n• Feature Engineering: Combine text features (keywords, sentiment, urgency indica- tors) with customer metrics (spending history, previous tickets).\n\n• Model Training: Compare simple models (logistic regression, decision trees) with more complex ones (random forests). Tune hyperparameters for best performance.\n\n• Evaluation: Use accuracy, precision, recall, F1-score, and confusion matrix. Apply cross-validation for robustness.\n\n• Integration: Urgency scores and suggested actions will be displayed in the dashboard.",
+    "chunk_id": "chunk_6",
+    "page_number": 3
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "5.4 Tools and Technologies\n\n• Programming: Python (backend/ML), JavaScript (frontend).\n\n• Libraries: scikit-learn, pandas, NLTK/spaCy for NLP; React for UI.\n\n5.5 Rationale\n\nThe modular design allows adaptation to different industries and datasets. Open-source tools and public datasets make the project feasible and cost-effective.\n\n6 Ethical Implications\n\nAutomated prioritization raises several ethical issues:\n\n• Fairness: The system must not disadvantage users based on language, writing style, or customer value. Fairness checks and bias mitigation will be included in model training [12].\n\n• Transparency: Agents and customers will see explicit urgency scores and thresholds.\n\n3\n\n• Data Privacy: Customer data will be handled per GDPR and company guidelines. Sensitive data will be anonymized where possible [7].\n\n• Accountability: Human agents retain final responsibility; the system is a decision- support tool.\n\nBest practices from leading AI ethics literature will be followed [7].",
+    "chunk_id": "chunk_7",
+    "page_number": 3
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "7 Requirements and Feasibility\n\n7.1 Functional Requirements\n\n• Public ticket submission form (name, email, phone, issue description)\n\n• Agent dashboard with prioritized tickets, urgency scores, suggested actions\n\n• Admin features: ticket search, filters, export\n\n• Integration-ready API\n\n7.2 Non-Functional Requirements\n\n• Performance: Real-time scoring (<2 seconds per ticket)\n\n• Scalability: Support for hundreds of tickets per day\n\n• Security: Secure data storage and access controls\n\n• Usability: Simple, intuitive UI for agents\n\n• Reliability: System uptime of 99.5% or higher",
+    "chunk_id": "chunk_8",
+    "page_number": 4
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "7.3 User Requirements\n\n• Easy ticket submission for customers, with confirmation\n\n• Actionable dashboard for agents, with urgent ticket indicators\n\n• Admins can review, filter, and export ticket data\n\n7.4 Feasibility\n\n• Technical: All technologies are open source and well-documented. Datasets are avail-\n\nable.\n\n• Time: Scope is manageable within the dissertation period, with a clear plan.\n\n• Risks:\n\n4\n\n– Data quality: Mitigated by careful selection, preprocessing, augmentation\n\n– Model performance: Fallback to rule-based/manual review if needed\n\n– Integration: Modular APIs for phased deployment\n\n– User adoption: Addressed through user testing and training",
+    "chunk_id": "chunk_9",
+    "page_number": 4
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "7.5 Risk Management\n\nRisk Likelihood Impact Mitigation Poor data quality Medium High Use multiple datasets, clean data Model bias Medium High Fairness checks, retraining Integration challenges Low Medium Modular APIs, clear documentation Time overruns Medium High Weekly milestones, reviews User resistance Medium Medium Training, clear communication",
+    "chunk_id": "chunk_10",
+    "page_number": 5
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "8 Project Plan\n\nPhase Tasks Duration Deliverables Literature Re- Domain research, review systems 2 weeks Literature re- view view doc Data Prepara- Download, clean, analyze datasets 2 weeks Cleaned tion datasets Model Develop- Feature engineering, training, evalu- 3 weeks Trained ML ment ation models Backend Dev Build API, integrate ML, DB setup 2 weeks Working API Frontend Dev Develop dashboard and ticket form 2 weeks Web dashboard Integration Connect frontend/backend, testing 2 weeks Integrated sys- tem Evaluation Performance, usability, fairness tests 2 weeks Evaluation report Write-up Document methodology, results, 2 weeks Dissertation conclusions draft Finalization Revisions, formatting, submission 1 week Final disserta- tion",
+    "chunk_id": "chunk_11",
+    "page_number": 5
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "9 Domain Context and Impact\n\nCustomer support is a key differentiator for businesses. Rapid, effective support helps re- tain customers and build reputation. Digital channels have increased both the volume and\n\n5\n\ncomplexity of requests, making manual triage unsustainable. NLP and ML can automate pri- oritization, ensuring urgent issues are addressed promptly and resources used efficiently [4, 8].\n\nThe system is relevant to technology, retail, finance, healthcare, and more. Its modular design allows adaptation to various ticket types, languages, and customer profiles.",
+    "chunk_id": "chunk_12",
+    "page_number": 5
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "References\n\n[1] Wilkinson, A. M. (1991). The scientist’s handbook for writing papers and dissertations.\n\n[2] Wiersma, W. (1995). Research methods in education (6th ed.).\n\n[3] Creswell, J. W. (1994). Research design qualitative and quantitative approaches.\n\n[4] Chatterjee, S., & Saha, D. (2021). Automated customer support using NLP: A survey. Journal of King Saud University – Computer and Information Sciences, 33(5), 497-508.\n\n[5] Zhang, Y., & Wang, S. (2016). A review of automatic customer service ticket classifica- tion. Expert Systems with Applications, 56, 311-319.\n\n[6] Pajares, F. (2007). Elements of a proposal.\n\n[7] Floridi, L., Cowls, J., Beltrametti, M., et al. (2018). AI4People—an ethical framework for a good AI society: Opportunities, risks, principles, and recommendations. Minds and Machines, 28, 689–707.",
+    "chunk_id": "chunk_13",
+    "page_number": 6
+  },
+  {
+    "source": "support-ticket-system.pdf",
+    "content": "[8] Kumar, A., & Sharma, A. (2020). Prioritizing support tickets using NLP and machine learning. Procedia Computer Science, 167, 2252-2261.\n\n[9] Kaggle Datasets: Multilingual Customer Support Tickets; Customer Support Ticket Dataset.\n\n[10] Springer Nature. Ethics and Information Technology journal.\n\n[11] Suresh, H., & Guttag, J. V. (2019). A framework for understanding unintended conse- quences of machine learning. arXiv preprint arXiv:1901.10002.\n\n[12] Binns, R. (2018). Fairness in machine learning: Lessons from political philosophy. Pro- ceedings of the 2020 Conference on Fairness, Accountability, and Transparency.\n\n6",
+    "chunk_id": "chunk_14",
+    "page_number": 6
+  }
+]
